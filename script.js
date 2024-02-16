@@ -12,14 +12,17 @@ const answer = ["4", "12", "10", "9"];
 
 console.log("Welcome to the Quiz");
 for (let i = 0; i < total_questions; i++) {
-  let answer = prompt(questions[i]);
-  if (answer == answer[i]) {
+  let prompt_answer = prompt(questions[i]);
+
+  if (prompt_answer == answer[i]) {
     console.log("This is correct answer");
     score = score + 1;
+    console.log(`Current score is ${score}`);
   } else {
     console.log("The answer is incorrect");
     score = score - 2;
+    console.log(`Current score is ${score}`);
   }
 }
 
-console.log(`Game score is: ${score}`);
+console.log(`Your Final Game score is: ${score}`);
